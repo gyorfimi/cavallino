@@ -1,0 +1,12 @@
+syntax: glob
+.idea
+.idea_modules
+target
+.history
+test/typescript/out
+src/main/typescript/_old
+RUNNING_PID
+localsettings.sbt
+db.bck
+syntax: regexp
+.*/target/.*
