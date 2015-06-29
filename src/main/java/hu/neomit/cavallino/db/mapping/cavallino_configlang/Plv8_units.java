@@ -1,11 +1,11 @@
-package hu.commit.prodigium.modules.cavallino.db.mapping.cavallino_configlang;
+package hu.neomit.cavallino.db.mapping.cavallino_configlang;
 
 import hu.commit.prodigium.db.mapping.*;
 import org.stjs.javascript.annotation.Namespace;
 import org.stjs.javascript.functions.Callback1;
 import hu.commit.prodigium.db.mapping.metadata.*;
 
-@Namespace("hu.commit.prodigium.modules.cavallino.db.mapping.cavallino_configlang")
+@Namespace("hu.neomit.cavallino.db.mapping.cavallino_configlang")
 public class Plv8_units implements TableRecord {
 
        public java.lang.String unitname;  // db:text 

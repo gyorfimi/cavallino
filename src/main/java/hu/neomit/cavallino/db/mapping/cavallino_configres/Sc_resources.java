@@ -1,11 +1,11 @@
-package hu.commit.prodigium.modules.cavallino.db.mapping.cavallino_configres;
+package hu.neomit.cavallino.db.mapping.cavallino_configres;
 
 import hu.commit.prodigium.db.mapping.*;
 import org.stjs.javascript.annotation.Namespace;
 import org.stjs.javascript.functions.Callback1;
 import hu.commit.prodigium.db.mapping.metadata.*;
 
-@Namespace("hu.commit.prodigium.modules.cavallino.db.mapping.cavallino_configres")
+@Namespace("hu.neomit.cavallino.db.mapping.cavallino_configres")
 public class Sc_resources implements TableRecord {
 
        public java.lang.String rscpath;  // db:text 

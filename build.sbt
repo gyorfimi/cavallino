@@ -6,6 +6,8 @@ version := "1.0-SNAPSHOT"
 
 pdModuleName := "cavallino"
 
+pdModuleDatabaseDeclarationPackageName := "hu.neomit.cavallino.db.mapping"
+
 libraryDependencies ++= Seq(
   "hu.commit" %% "prodigiumintf" % "1.0.3-SNAPSHOT",
   "hu.commit" %% "prodigiumbase" % "1.0.4-SNAPSHOT",
