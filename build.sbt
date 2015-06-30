@@ -17,3 +17,7 @@ libraryDependencies ++= Seq(
 
 javacOptions ++= Seq("-encoding", "UTF-8")
 
+
+pdUpdateDBDir := {
+      baseDirectory.value /  ".." / ".." / "project_prodigium" / "tools" / "database"
+}
