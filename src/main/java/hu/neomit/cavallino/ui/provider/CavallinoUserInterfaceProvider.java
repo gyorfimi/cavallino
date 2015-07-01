@@ -3,6 +3,7 @@ package hu.neomit.cavallino.ui.provider;
 import hu.commit.prodigium.Named;
 import hu.commit.prodigium.base.Array;
 import hu.commit.prodigium.base.JSCollections;
+import hu.commit.prodigium.base.Log;
 import hu.commit.prodigium.base.modules.Module;
 import hu.commit.prodigium.base.reactivity.ConnectTo;
 import hu.commit.prodigium.base.ui.ResourceLinkHandler;
@@ -50,5 +51,10 @@ public class CavallinoUserInterfaceProvider extends ProdigiumSmartClientScreen {
     @Override
     protected UserInterfaceElement createMainCSSLink(ResourceLinkHandler resourceHandler, String sc_module, String module, String page, Map<String, Object> parameters) {
             return UIElements.cssLink(resourceHandler.db(cavallinoModuleName, "stylesheet/main.css"));
+    }
+
+    @Override
+    public Array<UserInterfaceTemplate> render(LinkHandler linkHandler, ResourceLinkHandler resourceHandler, String module, String page, Map<String, Object> parameters, Map<String, Object> formData, Map<String, Object> authInfo) {
+        return super.render(linkHandler, resourceHandler, module, page, parameters, formData, authInfo);
     }
 }

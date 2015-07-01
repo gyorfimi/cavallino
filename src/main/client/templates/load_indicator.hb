@@ -9,28 +9,28 @@
       padding: 0;
     }
     #dvLoadingContent {
-        background: white url({{dburl 'cavallino' 'images/ilcavallo.jpg' }}) no-repeat center 10px;
-        background-size: 300px;
-        height: 300px;
-        width: 400px;
+        background: white url({{dburl 'cavallino' 'images/cavallino.png' }}) no-repeat center 10px;
+        background-size: 200px;
+        height: 200px;
+        width: 240px;
         z-index: 1000;
         top: 50%;
         margin: auto;
         color: white;
         font-family: sans-serif;
         font-size: 20px;
-        text-align: center;
         padding: 10px;
         border: rgb(30, 30, 77) 10px solid;
         border-radius: 12px;
       }
 
     #dvLoadingIntern {
-      padding-top: 80px;
     }
 
     #dvLoadingTitle {
-        margin-bottom: 20px;
+        position: relative;
+        left: 60px;
+        top: 50px;
     }
 
 </style>
