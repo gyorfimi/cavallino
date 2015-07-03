@@ -1,1 +1,2 @@
-<script src="{{dburl 'cavallino' 'scripts/start_cavallino.js' }}"></script>
+<script>hu.neomit.cavallino.ui.client.UIGenerator.generateUserInterface();</script>
+
