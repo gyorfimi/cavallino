@@ -1,0 +1,5 @@
+-Dconfig.file=./cavallino.local.conf
+-Ddb.default.url="jdbc:postgresql:prodigium"
+-Ddb.default.user=postgres
+-Ddb.default.password="sa"
+-Dprodigium.default.module=cavallino
