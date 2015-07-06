@@ -10,6 +10,13 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 
 --
+-- Name: cavallino_base; Type: SCHEMA; Schema: -; Owner: -
+--
+
+CREATE SCHEMA cavallino_base;
+
+
+--
 -- Name: cavallino_configlang; Type: SCHEMA; Schema: -; Owner: -
 --
 
@@ -23,11 +30,39 @@ CREATE SCHEMA cavallino_configlang;
 CREATE SCHEMA cavallino_configres;
 
 
-SET search_path = cavallino_configlang, pg_catalog;
+SET search_path = cavallino_base, pg_catalog;
+
+--
+-- Name: idgen; Type: SEQUENCE; Schema: cavallino_base; Owner: -
+--
+
+CREATE SEQUENCE idgen
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
+
+--
+-- Name: registrations; Type: TABLE; Schema: cavallino_base; Owner: -; Tablespace: 
+--
+
+CREATE TABLE registrations (
+    id bigint DEFAULT nextval('idgen'::regclass) NOT NULL,
+    email text NOT NULL,
+    firstname text,
+    familyname text,
+    phonenumber text,
+    password text
+);
+
+
+SET search_path = cavallino_configlang, pg_catalog;
 
 --
 -- Name: plv8_units; Type: TABLE; Schema: cavallino_configlang; Owner: -; Tablespace: 
@@ -65,6 +100,16 @@ SET search_path = cavallino_configres, pg_catalog;
 --
 
 ALTER TABLE ONLY sc_resources ALTER COLUMN rscpath SET DEFAULT '/'::text;
+
+
+SET search_path = cavallino_base, pg_catalog;
+
+--
+-- Name: registrations_pkey; Type: CONSTRAINT; Schema: cavallino_base; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY registrations
+    ADD CONSTRAINT registrations_pkey PRIMARY KEY (id);
 
 
 --
